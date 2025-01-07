@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER = postgres
+      - POSTGRES_PASSWORD = Almighty@1
+      - POSTGRES_DB = jasedu
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    restart: unless-stopped
+
+  # APP*****************************************
+  app:
+    image: jasedu/jaseduinitialnov:0.0.1
+    ports:
+      - 8080:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/jasedu
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: Almighty@1
+    restart: unless-stopped
+    depends_on:
+      - db
+
+
+

@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.4.0
+    environment:
+      DATABASE_HOST: docker-mysql
+      DATABASE_PORT: 3306
+      MYSQL_ROOT_PASSWORD: Almighty@100
+      MYSQL_DATABASE: jasedudt
+      MYSQL_USER: pepsil
+      MYSQL_PASSWORD: Almighty@1
+    restart: unless-stopped
+
+  # APP*****************************************
+  app:
+    image: jasedu/jaseduinitialnov:0.0.1
+    ports:
+      - 8080:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/jasedudt?autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: pepsil
+      SPRING_DATASOURCE_PASSWORD: Almighty@1
+    restart: unless-stopped
+    depends_on:
+      - db
+
+
+

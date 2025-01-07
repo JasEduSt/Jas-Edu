@@ -1,0 +1,203 @@
+vaadin-text-area, vaadin-combo-box, vaadin-button {
+        --lumo-border-radius-m: 2em;
+        font-family: var(--lumo-font-family);
+        font-size: var(--lumo-font-size-XL);
+
+}
+
+.login-information {
+    min-width: 300px;
+    flex: 0;
+    background: var(--lumo-primary-color-80pct);
+        font-family: var(--lumo-font-family);
+        font-size: var(--lumo-font-size-m);
+}
+
+.menu-button {
+    display: block;
+    padding: 20px 20px;
+    font-family: var(--lumo-font-family);
+    font-size: var(--lumo-font-size-m);
+    color: var(--lumo-primary-text-color);
+}
+
+.menu-link {
+    display: block;
+    padding: 20px 20px;
+
+    font-family: var(--lumo-font-family);
+    font-size: var(--lumo-font-size-m);
+    color: var(--lumo-primary-text-color);
+}
+
+.menu-link:hover {
+    text-decoration: none;
+}
+
+
+/*
+ * Special rules for narrow screens (responsive design rules)
+ */
+@media (max-width: 800px), (max-height: 600px) {
+
+	/*
+	 * Make menu toggle visible, and smaller
+	 */
+    .menu-toggle {
+        display: block;
+        height: var(--lumo-button-size);
+        width: var(--lumo-button-size);
+    }
+
+    .menu-header {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .product-form {
+        width: 100%;
+
+        /* Prevent text-fields from overflowing on narrow screens */
+        --vaadin-text-field-default-width: 6em;
+    }
+}
+
+/* Stack login-screen vertically on narrow screen */
+@media (max-width: 800px) {
+
+    .login-screen {
+        flex-direction: column;
+            font-family: var(--lumo-font-family);
+            font-size: var(--lumo-font-size-m);
+            color: var(--lumo-secondary-text-color);
+    }
+
+    .login-information {
+        display: block;
+    }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: left;
+}
+
+vaadin-combo-box::part(input-field) {
+    box-shadow: inset 0 0 0 1px var(--lumo-contrast-50pct);
+    background: white;
+    border: 2px solid skyblue;
+}
+
+vaadin-email-field::part(input-field){
+    box-shadow: inset 0 0 0 1px var(--lumo-contrast-50pct);
+    background: white;
+    border: 2px solid skyblue;
+}
+
+vaadin-text-field::part(input-field){
+    box-shadow: inset 0 0 0 1px var(--lumo-contrast-50pct);
+    background: white;
+    border: 2px solid skyblue;
+}
+
+vaadin-text-area::part(input-field) {
+    box-shadow: inset 0 0 0 1px var(--lumo-contrast-50pct);
+    border: 2px solid skyblue;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: oblique;
+    background-color: honeydew;
+}
+
+h2{
+    color: hsl(344, 79%, 40%);
+    font: algerian;
+}
+h1,h3,h4,h5,h6 {
+    color: hsl(344, 79%, 40%);
+    font: arial black;
+
+}
+h3 {
+    margin-left:1.50em;
+}
+h1 {
+     font-size: 20px;
+     animation: myfirst 5s infinite;
+     animation-delay: -2s;
+}
+
+.home-header2 {
+    font-family: "Segoe UI";
+    color: color: hsl(344, 79%, 40%);
+    font-size: 25px;
+    margin: 0 auto;
+    max-width: 900px;
+}
+.header-next{
+    font-family: "algerian ";
+    color: blue;
+    font-size: 20px;
+    text-indent: 50px;
+    max-width: 900px;
+}
+.home-top{
+    text-indent: 50px;
+    font-family: "arial black ";
+    font-size: 18px;
+}
+
+.feedback-form {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(36, 67, 40, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    width: 500px;
+}
+
+@keyframes myfirst {
+  0%   {background: Silver; left: 0px; top: 0px;}
+  25%  {background: Cyan; left: 100px; top: 0px;}
+  50%  {background: skyblue; left: 200px; top: 0px;}
+  75%  {background: Gold; left: 300px; top: 0px;}
+  100% {background: Aquamarine; left: 400px; top: 0px;}
+}
+
+.input:focus {
+   outline: 2px solid red;
+   outline-offset: 1.5px; // the offset
+ }
+
+ .glow {
+   font-size: 20px;
+   color: black;
+   text-align: center;
+   animation: glow 1s ease-in-out infinite alternate;
+ }
+
+ @-webkit-keyframes glow {
+   from {
+     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+   }
+
+   to {
+     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+   }
+ }
+
+
+
+
+
+
+
+
+
+

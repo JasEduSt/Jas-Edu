@@ -1,0 +1,25 @@
+{
+  "name": "jas-edu",
+  "description": "education",
+  "main": "Application.java",
+  "authors": [
+    "jas"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "l2t-paper-slider": "^2.0.4",
+    "simple-carousel": "polymer-simple-carousel#^1.1.0",
+    "masonry-layout": "desandro/masonry#^4.2.2",
+    "shadycss": "webcomponents/shadycss#^v1.1.0"
+  }
+}

@@ -1,0 +1,3 @@
+runtime: java21
+env_variables:
+  GOLANG_PROTOBUF_REGISTRATION_CONFLICT: "warn"
